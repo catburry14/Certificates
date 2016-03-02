@@ -1,4 +1,4 @@
-var mainApp = angular.module("myapp", []);
+var mainApp = angular.module("myapp", ['ngRoute']);
 
 mainApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
