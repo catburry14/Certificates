@@ -1,3 +1,13 @@
 <div>
-	Login Page
+	<form name="formData" novalidate>
+		User Name : <input name="username" type="text" ng-model="userName" required>
+		<span style="color: red" ng-show="formData.username.$dirty && formData.username.$invalid"> 
+			<span ng-show="formData.username.$error.required">Enter User Name</span>
+		</span> <br /> <br />
+		
+		Password : <input name="password" type="password" ng-model="password" required>
+		<span style="color: red" ng-show="formData.password.$dirty && formData.password.$invalid"> 
+			<span ng-show="formData.password.$error.required">Enter Password</span> 
+		</span>
+	</form>
 </div>
