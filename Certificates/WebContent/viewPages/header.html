@@ -6,9 +6,54 @@
 
 #headerStyle h2 {
 	padding: 20px;
+	
+}
+
+#headerMenuBar {
+	margin: 0px;
+}
+
+#headerMenuBar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+#headerMenuBar li {
+	float: left;
+}
+
+#headerMenuBar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#headerMenuBar li a:hover:not(.active){
+	background-color: #111;
+}
+
+#headerMenuBar .active {
+	background-color: #4CAF50;
 }
 </style>
 
 <div id="headerStyle" ng-controller="headerController">
 	<h2>{{heading}} Page</h2>
+	
+	<div id="headerMenuBar">
+	<ul>
+		<li><a ng-class="{'active':'/Home' == getPageURL()}" href="#Home">Home</a></li>
+		<li><a ng-class="{'active':'/About' == getPageURL()}" href="#About">About</a></li>
+		<li><a ng-class="{'active':'/Contact' == getPageURL()}" href="#Contact">Contact</a></li>
+		
+		<ul style="float: right; list-style-type: none;">
+			<li><a ng-class="{'active':'/Login' == getPageURL()}" href="#Login">Login</a></li>
+		</ul>
+	</ul>
+</div>
 </div>

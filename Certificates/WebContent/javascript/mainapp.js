@@ -4,16 +4,37 @@ mainApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     
     when('/Home', {
-       templateUrl: 'HomePage.html',
+       templateUrl: 'viewPages/HomePage.html',
        controller: 'HomeController'
     }).
     
+    when('/About', {
+        templateUrl: 'viewPages/AboutPage.html',
+        controller: 'AboutController'
+     }).
+    
     when('/Contact', {
-       templateUrl: 'ContactPage.html',
+       templateUrl: 'viewPages/ContactPage.html',
        controller: 'ContactController'
     }).
+    
+    when('/Login', {
+        templateUrl: 'viewPages/LoginPage.html',
+        controller: 'LoginController'
+     }).
+     
+     when('/Register', {
+         templateUrl: 'viewPages/RegisterPage.html',
+         controller: 'RegisterController'
+      }).
+     
+     when('/LogOut', {
+         templateUrl: 'viewPages/LogOutPage.html',
+         controller: 'LogOutController'
+      }).
     
     otherwise({
        redirectTo: '/Home'
     });
+    
  }]);
