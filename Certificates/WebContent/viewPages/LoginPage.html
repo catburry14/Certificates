@@ -1,13 +1,20 @@
 <div>
-	<form name="formData" novalidate>
-		User Name : <input name="username" type="text" ng-model="userName" required>
-		<span style="color: red" ng-show="formData.username.$dirty && formData.username.$invalid"> 
-			<span ng-show="formData.username.$error.required">Enter User Name</span>
-		</span> <br /> <br />
-		
-		Password : <input name="password" type="password" ng-model="password" required>
-		<span style="color: red" ng-show="formData.password.$dirty && formData.password.$invalid"> 
-			<span ng-show="formData.password.$error.required">Enter Password</span> 
-		</span>
+	<span ng-show="invalidUNandPW == 'invalid'">Invalid Username and Password</span>
+	<form name="formData" novalidate ng-submit="submit()">
+		<table>
+			<tr>
+				<td>User Name</td>
+				<td><input name="username" type="text" ng-model="userName"
+					required></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input name="password" type="password" ng-model="passWord"
+					required></td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="BtnLogin" value="Login" /></td>
+			</tr>
+		</table>
 	</form>
 </div>
